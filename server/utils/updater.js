@@ -16,20 +16,41 @@ const logHeaders = {
     error: chalk.bgRed(' ERR ')
 }
 
+/**
+ * @brief Verifie si le fichier locker est present
+ * @param {*} game 
+ */
 function isGameLocked(game) {
     return fs.existsSync(path.normalize(path.join(config.base, game, config.lock)));
 }
 
+/**
+ * @brief Creer un fichier locker permettant d'indiquer aux autres actions qu'une action est en encore
+ * @param {*} game 
+ */
 function lockGame(game) {
     console.log(logHeaders.info, 'Locking game...');
     fs.writeFileSync(path.normalize(path.join(config.base, game, config.lock)));
 }
 
+/**
+ * @brief Supprime les fichier locker
+ * @param {*} game 
+ */
 function unlockGame(game) {
     console.log(logHeaders.info, 'Unlocking game...');
     fs.unlinkSync(path.normalize(path.join(config.base, game, config.lock)));
 }
 
+/**
+ * @brief Met a jour le fichier inventaire
+ * Verifie si le fichier present dans le repertoire a le meme hash que l'ancienne sauvegarde
+ * Supprime les fichiers detecter comme obsolete dans le fichier inventaire
+ * @param {*} game 
+ * @param {*} element 
+ * @param {*} files 
+ * @param {*} inventory 
+ */
 function updateInventory(game, element, files, inventory) {
     let gamePath = path.normalize(path.join(config.base, game, config.game.workspace));
 
@@ -52,6 +73,12 @@ function fileNeedsUpdate(newStat, oldStat) {
     return !oldStat || !oldStat.checksum || newStat.checksum !== oldStat.checksum
 }
 
+/**
+ * @brief Process de compression des fichiers
+ * Le fichiers compresser sont au format ZIP
+ * @param {*} game 
+ * @param {*} files 
+ */
 async function compress(game, files) {
     let start = moment(Date.now());
     console.log(logHeaders.info, 'Compressing files...');
@@ -82,6 +109,13 @@ async function compress(game, files) {
     console.log(logHeaders.success, `Files compressed in ${finish.diff(start, 'seconds', true)}s.`);
 }
 
+/**
+ * @brief Supprimes les fichiers obsolete
+ * Verification entre le fichier inventaire et les fichiers present sur le disque
+ * Met a jour le fichier inventaire en supprimant les fichiers obsolete du fichier
+ * @param {*} game 
+ * @param {*} inventory 
+ */
 function purgeObsoleteFiles(game, inventory) {
     let start = moment(Date.now());
     console.log(logHeaders.info, 'Locating obsolete files...');
@@ -113,6 +147,11 @@ function purgeObsoleteFiles(game, inventory) {
     console.log(logHeaders.success, `Obsolete files purged in ${finish.diff(start, 'seconds', true)}s.`);
 }
 
+/**
+ * @brief Process de mise a jour du fichier inventaire
+ * Chaque fichier present dans le repertoire de l'application va etre comparer avec le fichier inventaire
+ * @param {*} game 
+ */
 function getUpdatableFiles(game) {
     let start = moment(Date.now());
     console.log(logHeaders.info, 'Locating updatable files...');

@@ -47,6 +47,7 @@ module.exports = function(Update) {
         }
     );
 
+  // effectue une nouvelle mise a jour
   Update.run =  function(game, callback) {
     let lockPath = `${config.base}/${game}/${config.update.workspace}/${config.update.lock}`;
     if (fs.existsSync(lockPath)) {
@@ -70,6 +71,7 @@ module.exports = function(Update) {
     }
   };
 
+  // recupere le status de la creation de la mise a jour
   Update.status = function(game, callback) {
     let gamePath = `${config.base}/${game}`;
     let lockPath = `${gamePath}/${config.lock}`;
