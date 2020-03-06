@@ -5,7 +5,7 @@
 
 [![discord](https://discordapp.com/api/guilds/294405146300121088/widget.png)](https://discord.gg/fZP7TWq)
 
-API permettant d'intéragir avec le serveur distant.
+API permettant de creer les mise a jour pour [Andromeda](https://github.com/zetsumi/Andromeda).
 
 ## Details
 - Language: `JavaScript`
