@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "d5b7fa5f-8b8d-4b2f-823e-0512fad84ae7",
+		"name": "AstralStudio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Comprezator",
+			"description": "",
+			"item": [
+				{
+					"name": "local",
+					"description": "",
+					"item": [
+						{
+							"name": "http://localhost:3000/api/update/run",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"test\",\n\t\"game\": \"fulgurflyff\",\n\t\"secret_token\": \"asdasdasdasd\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/update/run",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"update",
+										"run"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "fulgurflyff",
+					"description": "",
+					"item": [
+						{
+							"name": "http://54.36.122.99:3000/api/update/run",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"test\",\n\t\"game\": \"fulgurflyff\",\n\t\"secret_token\": \"asdasdasdasd\"\n}"
+								},
+								"url": {
+									"raw": "http://54.36.122.99:3000/api/update/run",
+									"protocol": "http",
+									"host": [
+										"54",
+										"36",
+										"122",
+										"99"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"update",
+										"run"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}

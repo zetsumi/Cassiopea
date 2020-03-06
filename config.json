@@ -1,0 +1,18 @@
+{
+    "base": "/opt/cassiopeia/storage",
+    "lock": ".lock",
+    "game": {
+        "workspace": "game"
+    },
+    "update": {
+        "workspace": "update"
+    },
+    "meta": {
+        "workspace": "meta",
+        "inventory": "inventory.json",
+        "ignored": "ignored.json"
+    },
+    "compression": {
+        "level": 9
+    }
+}

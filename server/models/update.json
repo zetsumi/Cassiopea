@@ -1,0 +1,51 @@
+{
+  "name": "Update",
+  "idInjection": false,
+  "base": "Model",
+  "options": {
+    "postgresql": {
+      "schema": "public",
+      "table": "update"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": false,
+      "id": true,
+      "postgresql": {
+        "dataType": "bigserial"
+      }
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "postgresql": {
+        "dataType": "character varying"
+      }
+    },
+    "status": {
+      "required": true,
+      "type": "string",
+      "postgresql": {
+        "dataType": "character varying"
+      }
+    },
+    "errors": {
+      "required": false,
+      "type": "string",
+      "postgresql": {
+        "dataType": "character varying"
+      }
+    },
+    "date": {
+      "required": false,
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

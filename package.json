@@ -1,0 +1,38 @@
+{
+  "name": "cassiopeia",
+  "version": "1.0.1",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev FORCE_COLOR=1 node .",
+    "dev": "cross-env NODE_ENV=dev FORCE_COLOR=1 node .",
+    "lint": "eslint .",
+    "posttest": "npm run lint"
+  },
+  "dependencies": {
+    "archiver-promise": "^1.0.0",
+    "chalk": "^2.4.2",
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "cross-env": "^5.2.0",
+    "glob": "^7.1.0",
+    "helmet": "^3.10.0",
+    "loopback": "^3.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.2.0",
+    "loopback-connector-postgresql": "^3.5.0",
+    "moment": "^2.24.0",
+    "serve-favicon": "^2.0.1",
+    "sleep": "^6.1.0",
+    "strong-error-handler": "^3.0.0",
+    "threads": "^0.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0"
+  },
+  "license": "UNLICENSED",
+  "description": "cassiopeia"
+}
