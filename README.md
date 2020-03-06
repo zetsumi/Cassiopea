@@ -8,19 +8,17 @@
 API permettant de creer les mise a jour pour [Andromeda](https://github.com/zetsumi/Andromeda).
 
 ## Details
-- Language: `JavaScript`
-- Framework: `LoopBack` https://loopback.io/
-- Application type: `Console`
-- Database type: `PostgreSQL`  https://www.postgresql.org/
-- Configuration files type: `yaml` https://fr.wikipedia.org/wiki/YAML
-- Environment: `Ubuntu Server` https://www.ubuntu.com/download/server
+- Language:     [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- Framework:    [LoopBack](https://loopback.io/)
+                [NodeJs](https://nodejs.org/fr/) 
+- Configuration files type: [json](https://www.json.org/json-en.html)
 
 ## Fonctionnalités
 
 ### Update
-- Ajouter/Modifier/Récupérer les nouvelle mise à jour.
+- Ajouter / Modifier / Récupérer les nouvelle mise à jour.
 - Compresser les fichiers.
 - Générer un inventaire de fichiers.
 
 ### Media
-- Ajouter/Modifier/Récupérer des fichier numérique.
+- Ajouter / Modifier / Récupérer des fichier numérique.
