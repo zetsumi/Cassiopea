@@ -3,7 +3,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
-[![discord](https://discordapp.com/api/guilds/294405146300121088/widget.png)](https://discord.gg/whZkcQ)
+[![discord](https://discordapp.com/api/guilds/294405146300121088/widget.png)](https://discord.gg/fZP7TWq)
 
 API permettant d'intéragir avec le serveur distant.
 
